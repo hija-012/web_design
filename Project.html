@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICST - International Campus Of Science And Technology</title>
+    
+    <!-- External Stylesheets and Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS for utility-first styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Google Font: Inter -->
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Apply Inter font globally */
+            color: #333; /* Default text color for body */
+        }
+        /* Hero section background image and overlay for text readability */
+        .hero-background {
+            background-image: url('https://icst.edu.lk/wp-content/uploads/2023/12/01-scaled-480x320.jpg'); /* Placeholder for hero image */
+            background-size: cover; /* Cover the entire area */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            min-height: 80vh; /* Minimum height to ensure visibility */
+            display: flex;
+            align-items: center; /* Vertically center content */
+            justify-content: center; /* Horizontally center content */
+            text-align: center; /* Center text within the section */
+            position: relative; /* Needed for absolute positioning of overlay */
+        }
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
+            z-index: 1; /* Ensure overlay is below text but above background image */
+        }
+        .hero-background > div { /* Target direct child div of hero-background for z-index */
+            position: relative;
+            z-index: 2; /* Ensure text is above the overlay */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- Header Section: Top Bar with Social Links and Utility Navigation -->
+    <header>
+        <div class="bg-gray-800 text-gray-200 py-2 text-sm">
+            <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 mb-2 sm:mb-0">
+                    <a href="#" class="hover:text-white transition-colors duration-300" aria-label="Facebook">
+                        <i class="fab fa-facebook-square text-lg"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition-colors duration-300" aria-label="Instagram">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                </div>
+                <!-- Top Navigation Links -->
+                <nav aria-label="Utility Navigation">
+                    <ul class="flex flex-wrap justify-center sm:justify-end space-x-4">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Partners</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Events</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Fee</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Gallery</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">LMS</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Library</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Navigation Bar -->
+        <nav class="bg-white shadow-lg py-4" aria-label="Main Navigation">
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center">
+                <!-- Logo/University Name -->
+                <div class="text-2xl font-bold text-blue-800 mb-4 lg:mb-0">
+                    <a href="#" class="flex items-center" aria-label="ICST Home">
+                        <img src="https://icst.edu.lk/wp-content/uploads/2023/11/ICST-Logo-Final@4x-1.png" alt="ICST Logo" class="mr-2 rounded-md">
+                        ICST
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-lg font-medium text-gray-700">
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">About</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Faculties</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Courses</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Research</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Student life</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Contact</a></li>
+                </ul>
+
+                <!-- Call Us Button (visible on larger screens) -->
+                <div class="hidden lg:block ml-8">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full shadow-md transition-all duration-300">
+                        CALL US
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section: Main banner with university slogan -->
+    <section class="hero-background text-white">
+        <div class="p-8 rounded-lg">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-wide">ICST</h1>
+        </div>
+    </section>
+
+    <!-- Academic Programs Section -->
+    <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">Our Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Undergraduate Program Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/100x100/ADD8E6/003366?text=UG" alt="Undergraduate Program Icon" class="w-24 h-24 rounded-full mb-6 border-4 border-blue-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Undergraduate</h3>
+                    <p class="text-gray-600 mb-6">Undergraduates thrive at ICST: quality education, vibrant campus life.</p>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md">
+                        Explore
+                    </button>
+                </div>
+
+                <!-- Postgraduate Program Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/100x100/FFDDC1/003366?text=PG" alt="Postgraduate Program Icon" class="w-24 h-24 rounded-full mb-6 border-4 border-orange-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Postgraduate</h3>
+                    <p class="text-gray-600 mb-6">Elevate your expertise. Postgraduate studies at ICST await your brilliance.</p>
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md">
+                        Explore
+                    </button>
+                </div>
+
+                <!-- DAIT Program Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/100x100/C1FFC1/003366?text=DAIT" alt="DAIT Program Icon" class="w-24 h-24 rounded-full mb-6 border-4 border-green-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">DAIT</h3>
+                    <p class="text-gray-600 mb-6">The Bachelor of Applied IT is a unique three-year undergraduate degree programme</p>
+                    <button class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md">
+                        Explore
+                    </button>
+                </div>
+
+                <!-- Preparatory Studies Program Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/100x100/D3D3D3/003366?text=PS" alt="Preparatory Studies Icon" class="w-24 h-24 rounded-full mb-6 border-4 border-gray-300">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Prepatory Studies</h3>
+                    <p class="text-gray-600 mb-6">Prep for success: ICST's Preparatory Studies program ignites academic excellence.</p>
+                    <button class="bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md">
+                        Explore
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="bg-blue-800 text-white py-12 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Subscribe</h2>
+            <p class="text-lg">Stay updated with the latest news from ICST.</p>
+            <button class="mt-6 bg-white text-blue-800 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300">
+                Sign Up for Newsletter
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
+            <!-- Contact Information -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-6">Contact Us</h3>
+                <address class="not-italic">
+                    <p class="mb-3 flex items-start">
+                        <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-3"></i>
+                        <span>ICST, University Park</span>
+                    </p>
+                    <p class="mb-3 flex items-center">
+                        <i class="fas fa-phone-alt text-blue-400 mr-3"></i>
+                        <a href="tel:+94743444444" class="hover:text-white transition-colors duration-300">+94 74 3444 444</a>
+                    </p>
+                    <p class="mb-3 flex items-center">
+                        <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                        <a href="mailto:admissions@icst.edu.lk" class="hover:text-white transition-colors duration-300">admissions@icst.edu.lk</a>
+                    </p>
+                </address>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300" aria-label="Instagram">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Navigation -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Student Life</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Contact</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Gallery</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-300">Research</a></li>
+                </ul>
+            </div>
+
+            <!-- Inspirational Quote/Philosophy -->
+            <div class="lg:col-span-2">
+                <h3 class="text-xl font-bold text-white mb-6">Our Philosophy</h3>
+                <p class="text-lg italic text-gray-400 leading-relaxed">
+                    "@ICST No matter the challenges to come, we will remain connected through our core values."
+                </p>
+            </div>
+        </div>
+
+        <!-- Copyright Information -->
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 text-sm">
+            Copyright &copy; 2024 ICST. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
